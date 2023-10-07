@@ -1,0 +1,21 @@
+---
+export interface Props {
+  title: string;
+  desc: string;
+  kw: string;
+}
+const { title, desc, kw } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <title>{ title }</title>
+    <meta name="keywords" content={ kw }>
+    <meta name="description" content={ desc }>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
