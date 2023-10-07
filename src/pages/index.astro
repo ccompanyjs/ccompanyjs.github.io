@@ -1,8 +1,10 @@
 ---
-import Layout from "../components/Layout.astro"
+import Header from "../components/Header.astro";
+import Layout from "../components/Layout.astro";
 import { seoHome } from "../components/seo";
+const { title, desc, kw } = seoHome;
 ---
 
-<Layout title={seoHome.title} desc={seoHome.desc} kw={seoHome.kw}>
-  <h1>hello world</h1>
+<Layout title={title} desc={desc} kw={kw}>
+  <Header />
 </Layout>

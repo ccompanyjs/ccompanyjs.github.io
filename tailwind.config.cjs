@@ -4,13 +4,16 @@ module.exports = {
 	theme: {
 		extend: {},
 		colors: {
-			colors: {
-				nblue: '#001f3f',
-				rblue: '#0074e4',
-				lblue: '#4cb1e1',
-				iblue: '#a7dbd8',
-				pwhite: '#ffffff'
+			clrs: {
+				nvblue: "#001f3f",
+				ryblue: "#0033cc",
+				dpblue: "#004488",
+				mnblue: "#191970",
+				white: "#ffffff"
 			},
+		},
+		fontFamily: {
+			sans: ["Roboto", "sans-serif"],
 		},
 	},
 	plugins: [],
