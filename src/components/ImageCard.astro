@@ -1,0 +1,13 @@
+---
+export interface Props {
+  icon: string
+}
+
+const { icon } = Astro.props
+---
+
+{icon == 'page'
+  ? <img class="w-[90%] h-80px rounded mb-1" src="/pages.jpg" alt="Imagen de una pagina 'demo'"/>
+  : icon == 'deploy' ? <img class="w-[90%] h-60px rounded mb-1" src="/deploy.jpg" alt="Imagen de una pagina 'demo'"/>
+  : ''
+}

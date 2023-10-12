@@ -1,0 +1,35 @@
+---
+// /Assets/
+import services from "../assets/services";
+import conts from "../assets/constains";
+import ImageCard from "./ImageCard.astro";
+---
+
+<main
+  class={`card-main grid-rows-[${services.length}]`}
+>
+  {
+    services.map((svc) => (
+      <section class="bg-neutral-700 rounded-md flex items-center justify-center flex-col p-1 text-center text-neutral-200">
+        <ImageCard icon={svc.icon} />
+        <h2
+          class="text-xl font-medium tracking-[1px] uppercase leading-5 mb-[10px]"
+        >{svc.name}</h2>
+        <p class="text-lg font-light tracking-[0.5px] leading-6 [&>span]:text-neutral-500 [&>span]:font-medium">
+          {svc.desc} <br /> <span>MXN${svc.price * conts.margin} (Dependiendo por que tan customizable sea).</span>
+        </p>
+      </section>
+    ))
+  }
+</main>
+
+<style lang="scss">
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card-main {
+    @apply bg-neutral-900/50 w-[300px] tablet:w-[620px] h-[1116px] tablet:h-[800px] mx-auto p-2 rounded-md grid tablet:grid-cols-2 gap-2 mb-[20px] mt-[80px];
+  }
+}
+</style>

@@ -1,17 +1,16 @@
 <header class="header">
   <h2
-    class="text-clrs-white font-[400] text-xl [&>span]:text-clrs-white/60"
+    class="text-white font-[400] text-xl [&>span]:text-white/60"
   >CoreJS <span>Enterprise</span>
   </h2>
 </header>
 
-<style type="scss">
-  @tailwind components;
-  @layer components {
-    .header {
-      @apply bg-clrs-mnblue/50 backdrop-blur-3xl w-[96%] h-[65px] my-[10px]
-      mx-auto pl-4 border-[3px] border-clrs-mnblue rounded-md 
-      flex items-center justify-start
-    }
+<style lang="scss">
+@tailwind components;
+@layer components {
+  .header {
+    @apply bg-neutral-900/60 backdrop-blur-md h-[65px] pl-4 border-[3px] border-neutral-900 rounded-md 
+    flex items-center justify-start mb-6 w-full fixed top-[5px]
   }
-  </style>
+}
+</style>

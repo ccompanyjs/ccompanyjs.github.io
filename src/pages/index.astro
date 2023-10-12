@@ -1,10 +1,17 @@
 ---
+// /Components/
 import Header from "../components/Header.astro";
 import Layout from "../components/Layout.astro";
-import { seoHome } from "../components/seo";
-const { title, desc, kw } = seoHome;
+
+// /Assets/
+import { seoIndex } from "../assets/seo";
+import ServicesList from "../components/ServicesList.astro";
+
+// Etc
+const { title, desc, kw, icon } = seoIndex;
 ---
 
-<Layout title={title} desc={desc} kw={kw}>
+<Layout title={title} desc={desc} kw={kw} icon={icon}>
   <Header />
+  <ServicesList />
 </Layout>
