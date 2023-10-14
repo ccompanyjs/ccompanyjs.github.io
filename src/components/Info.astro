@@ -1,0 +1,44 @@
+---
+import { infos } from '../assets'
+import DevIcon from '../icons/DevIcon.astro';
+---
+
+<aside class="aside">
+  <div class="card-info">
+    <img class="h-20 w-20 rounded" src="/logo.jpg" alt="Logo de Core Company">
+    <h2 class="text-white text-lg">Core Company</h2>
+    <p class="text-white text-lg">Información publica de Core Company</p>
+  </div>
+  {infos.map(({name, desc, roles}) => (
+    <div class="card-info">
+      <DevIcon />
+        <div>
+          <h2 class="text-white text-lg">
+          {name}<br />
+        </h2>
+        <div class="flex flex-col tablet:flex-row gap-1 tablet:items-center tablet:justify-center">
+          {roles.map(({name}) => (
+            <div class="text-sm bg-slate-800 rounded-md p-1 text-white w-[80%] tablet:w-auto">
+              {name}
+            </div>
+          ))}
+        </div>
+        <p class="text-white text-lg">{desc}</p>
+      </div>
+    </div>
+  ))}
+</aside>
+
+<style lang="scss">
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .aside {
+    @apply w-auto bg-neutral-800 mt-[80px] mx-10 p-[10px] rounded-md flex flex-col laptop:grid laptop:grid-cols-2 max-w-[1200px];
+    gap: 10px;
+  }
+  .card-info {
+    @apply bg-neutral-600 rounded-md w-full flex flex-col tablet:flex-row items-center justify-center tablet:justify-start tablet:pl-5 gap-5 tablet:h-24 text-center;
+  }
+}
+</style>

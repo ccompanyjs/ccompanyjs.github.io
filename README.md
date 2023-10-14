@@ -1,1 +1,1 @@
-# CoreJS Company
+# Core Company

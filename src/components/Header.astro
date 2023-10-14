@@ -1,16 +1,23 @@
-<header class="header">
-  <h2
+<nav class="navigation">
+  <img class="h-10 w-10"
+   src="/logo.jpg" alt="Logo de Core Company">
+  <a href="/"
     class="text-white font-[400] text-xl [&>span]:text-white/60"
-  >CoreJS <span>Enterprise</span>
-  </h2>
-</header>
+  >Core <span>Enterprise</span>
+  </a>
+  <!-- <ul class="">
+    <li>
+      <a href="/">Infos</a>
+    </li>
+  </ul> -->
+</nav>
 
 <style lang="scss">
 @tailwind components;
 @layer components {
-  .header {
-    @apply bg-neutral-900/60 backdrop-blur-md h-[65px] pl-4 border-[3px] border-neutral-900 rounded-md 
-    flex items-center justify-start mb-6 w-full fixed top-[5px]
+  .navigation {
+    @apply bg-neutral-900/60 backdrop-blur-[10px] h-[65px] pl-4 border-4 border-neutral-900 rounded-xl 
+    flex items-center justify-start w-screen fixed top-[0px]
   }
 }
 </style>

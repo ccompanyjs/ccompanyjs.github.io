@@ -1,14 +1,12 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../components/Layout.astro";
-import { SEOs } from "../assets";
-import ServicesList from "../components/ServicesList.astro";
+import { SEOs as seo } from "../assets";
 import Info from "../components/Info.astro";
-const { title, desc, kw, icon } = SEOs.index;
+const { title, desc, kw, icon } = seo.infos;
 ---
 
 <Layout title={title} desc={desc} kw={kw} icon={icon}>
   <Header />
-  <ServicesList />
   <Info />
 </Layout>
